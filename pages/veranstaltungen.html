@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+
+{% for post in site.posts%}
+    {% if post.tags contains "event" %}
+        <a href="{{post.url}}">
+            <h4>{{post.title}}</h4>
+            <p>{{post.teaser | markdownify}}</p>
+        </a>
+    {% endif %}
+  {% endfor %}
